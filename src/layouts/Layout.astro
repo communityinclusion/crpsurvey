@@ -1,3 +1,10 @@
+---
+import "../assets/styles/ici.css";
+import { Image } from "astro:assets";
+import crpLogo from "../assets/img/crp_survey_logo_F.png";
+import ancorLogo from "../assets/img/ancor.png";
+---
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -12,12 +19,34 @@
         />
     </head>
     <body>
-        <div class="container">
-            <slot />
+        <div class="wrapper">
+            <header class="bg_ici_lightgrey">
+                <div class="container">
+                    <div class="row gx-8">
+                        <div class="col-md text-center">
+                            <Image src={crpLogo} alt="Crp Survey logo" class="img-fluid" />
+                        </div>
+                        <div class="col-md text-center">
+                            <Image src={ancorLogo} alt="Ancor logo" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="row pt-3 text-center">
+                        <h2 class="reveal display-6 fw-bold">
+                            The 2026 National Survey of Community Rehabilitation Providers
+                        </h2>
+                    </div>
+                </div>
+            </header>
+            <main class="pt-3">
+                <div class="container">
+                    <slot />
+                </div>
+            </main>
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                crossorigin="anonymous">
+            </script>
         </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
     </body>
 </html>

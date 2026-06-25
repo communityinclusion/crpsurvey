@@ -1,0 +1,486 @@
+body {
+    font-family: "Lato", sans-serif;
+    color: #30424b;
+    margin: 0;
+    min-height: 100vh;
+    background: #76a6cd; /* the "border" color */
+    padding: 1em; /* the "border" width */
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background: #fff;
+    border-radius: 0.75em; /* only the inner edge rounds */
+    min-height: calc(100vh - 2em);
+    overflow: hidden;
+}
+
+main,
+.container:not(.navbar .container),
+article,
+section {
+    font-size: clamp(16px, 1rem + 0.25vw, 18px);
+    line-height: 1.6;
+}
+
+:root {
+    --ici-blue: #0077af;
+    --ici-purple: #5c2a7a;
+    --ici-burnt: #cc6d2b;
+    --ici-maroon: #981936;
+    --ici-grey: #7e8083;
+    --ici-lightgrey: #f0f5f7;
+    --ici-lightblue: #76a6cd;
+}
+
+@view-transition {
+    navigation: auto;
+}
+.ici_blue {
+    color: var(--ici-blue);
+}
+.ici_purple {
+    color: var(--ici-purple);
+}
+
+.ici_maroon {
+    color: var(--ici-maroon);
+}
+.ici_grey {
+    color: var(--ici-grey);
+}
+.ici_lightblue {
+    color: var(--ici-lightblue);
+}
+.ici_lightgrey {
+    color: var(--ici-lightgrey);
+}
+
+.bg_ici_grey {
+    background-color: var(--ici-grey) !important;
+}
+.bg_ici_lightgrey {
+    background-color: var(--ici-lightgrey) !important;
+}
+.bg_ici_purple {
+    background-color: var(--ici-purple) !important;
+}
+.bg_ici_burnt {
+    background-color: var(--ici-burnt) !important;
+}
+.bg_ici_maroon {
+    background-color: var(--ici-maroon) !important;
+}
+.bg_ici_lightblue {
+    background-color: var(--ici-lightblue) !important;
+}
+
+.direct-link {
+    display: none;
+}
+
+a {
+    color: #0077af;
+}
+.top_row .bottom_row {
+    font-family: "Montserrat", sans-serif;
+}
+.top_row {
+    color: #5f9632;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.bottom_row {
+    color: #0077af;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+header img {
+    max-width: 300px !important;
+}
+header a {
+    text-decoration: none;
+}
+
+header {
+    padding: 1.5em;
+    font-variant: small-caps;
+}
+.reveal {
+    display: inline-block;
+     animation: reveal 1.2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+     clip-path: inset(0 100% 0 0);
+     transform: translateX(-12px);
+   }
+
+   @keyframes reveal {
+     to {
+       clip-path: inset(0 0 0 0);
+       transform: translateX(0);
+     }
+   }
+main {
+}
+
+.border-bottom-animate {
+    padding-top: 1em;
+}
+
+.border-bottom-animate:after {
+    content: "";
+    display: block;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(
+            45deg,
+            var(--ici-lightblue),
+            var(--ici-purple)
+        )
+        1;
+    margin-bottom: 1em;
+    transition: 0.5s;
+    width: 100%;
+    animation-duration: 1s;
+    animation-name: border-animation;
+}
+@keyframes border-animation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.boxed {
+    border: solid 0.1em var(--ici-grey);
+    border-image: linear-gradient(
+            to top left,
+            var(--ici-lightblue),
+            var(--ici-purple)
+        )
+        1;
+    clip-path: inset(0 round 0.1em);
+}
+
+.reading {
+    max-width: 50rem;
+}
+main.h2 {
+    color: #0077af;
+    border-bottom: 0.2px solid #0077af;
+}
+
+h3 {
+    color: #30424b);
+    border-bottom: 0.2px solid var(--ici-purple);
+    font-variant: small-caps;
+}
+.resources sup {
+    float: right;
+    color: var(--ici-maroon);
+}
+footer {
+    background-color: #faf9f6;
+    border-top: 5px solid;
+    border-image: linear-gradient(45deg, var(--ici-purple), var(--ici-maroon)) 1;
+    margin-top: 5em;
+}
+
+.subfooter {
+    font-size: small;
+    padding: 10px 0;
+    border-top: #333 1px solid;
+}
+
+footer h3 {
+    border-bottom: 1px solid #333;
+}
+footer a {
+    font-weight: bold;
+}
+
+.boxer {
+    border: 5px solid;
+    border-image: linear-gradient(
+            45deg,
+            var(--ici-lightblue),
+            var(--ici-purple)
+        )
+        1;
+    margin-bottom: 1em;
+}
+
+.row-striped:nth-of-type(odd) {
+    background-color: #f8f9fa;
+    border-left: 4px #0077af solid;
+}
+
+.row-striped:nth-of-type(even) {
+    background-color: #ffffff;
+    border-left: 4px #5f9632 solid;
+}
+
+.row-striped {
+    padding: 5px 5px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+.row-striped details {
+    border: none;
+}
+.row-striped summary {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-toggler {
+    background-color: #ccc;
+}
+
+.boxer hr {
+    margin: 0px;
+}
+
+hr {
+    display: block;
+    margin: 30px 0 10px;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: var(--ici-lightblue);
+}
+hr + h2 {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin: 0;
+    padding: 5px 5px;
+    border: 1px solid #5c2a7a;
+    transform: translateX(-50%);
+    color: #0077af;
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-align: center;
+
+    background-color: #fff;
+}
+hr + h2::first-letter {
+    margin-left: 0.32em;
+}
+
+/* Alternative transform: translate */
+hr + h2 {
+    border-width: 1px 0;
+    margin-bottom: 1em;
+}
+hr + h2::before,
+hr + h2::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #0077af;
+    content: "";
+}
+hr + h2::before {
+    left: 0;
+}
+hr + h2::after {
+    right: 0;
+}
+
+/**/
+* {
+    box-sizing: border-box;
+}
+
+.nav-link {
+    color: #0077af;
+}
+
+.blue {
+    color: #0077af;
+}
+
+/* the details stuff for the cool little dropdown */
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    font-size: large;
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+    color: #616161;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
+}
+details[open] summary ~ * {
+    animation: sweep 0.5s ease-in-out;
+}
+
+details .btn {
+    margin-left: 3em;
+    margin-bottom: 1em;
+}
+
+@keyframes sweep {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+summary {
+    padding: 1em;
+}
+.lil_summary {
+    font-size: small;
+    color: #0077af;
+    border-right: #5f9632 1px solid;
+    padding-right: 0.5em;
+}
+.lil_summary .fa {
+    color: #5f9632;
+}
+.no-right-border {
+    border-right: 0px;
+}
+
+@media (min-width: 992px) {
+    .mobi50 {
+        max-width: 50%;
+        float: right;
+    }
+    nav {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+}
+.mwt img {
+    max-width: 15px;
+}
+.mwt-green {
+    color: #5f9632;
+}
+.mwt-blue {
+    color: #0077af;
+}
+
+.instruct {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+/* Datatable.js styles */
+.page-link {
+    padding: 0.375rem 0.5rem !important;
+}
+
+.dtsp-titleRow {
+    display: none;
+}
+.clearButton {
+    display: none;
+}
+
+.dataTables_scrollBody {
+    overflow: none;
+}
+
+.sources {
+    background-color: #f7f7f8;
+    padding: 0.5em;
+}
+
+article {
+    border: 1px lightgrey dashed;
+    border-radius: 12px;
+    margin: 1em;
+    padding: 1em;
+}
+section {
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #30424b, #f16928) 1;
+    clip-path: inset(0 round 0.5em);
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/*heydon pickerings responsive grid method */
+.grid-30 {
+    --min: 30ch;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+
+    gap: 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 2rem;
+    height: 2rem;
+    background-color: grey;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-inner {
+    padding: 1em;
+}
+
+.carousel .card {
+    margin: 0 0.5em;
+    height: 310px;
+}
+
+.carousel .card-body {
+    padding-top: 0;
+}
+
+@media (max-width: 1199.98px) {
+    .carousel .card {
+        margin: 0 0.5em;
+        height: 150px;
+    }
+}
+
+.focus {
+    max-width: 800px;
+    padding: 2em;
+}
+.focus_areas div.row {
+    padding: 0.5em;
+    background-color: white;
+}
+
+.card-gradient-border {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, var(--ici-burnt), var(--ici-lightblue))
+            border-box;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
