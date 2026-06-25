@@ -7,7 +7,9 @@ body {
     padding: 1em; /* the "border" width */
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .wrapper {
     background: #fff;
     border-radius: 0.75em; /* only the inner edge rounds */
