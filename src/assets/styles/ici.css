@@ -108,17 +108,17 @@ header {
 }
 .reveal {
     display: inline-block;
-     animation: reveal 1.2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-     clip-path: inset(0 100% 0 0);
-     transform: translateX(-12px);
-   }
+    animation: reveal 1.2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(-12px);
+}
 
-   @keyframes reveal {
-     to {
-       clip-path: inset(0 0 0 0);
-       transform: translateX(0);
-     }
-   }
+@keyframes reveal {
+    to {
+        clip-path: inset(0 0 0 0);
+        transform: translateX(0);
+    }
+}
 main {
 }
 
@@ -130,12 +130,7 @@ main {
     content: "";
     display: block;
     border-bottom: 5px solid;
-    border-image: linear-gradient(
-            45deg,
-            var(--ici-lightblue),
-            var(--ici-purple)
-        )
-        1;
+    border-image: linear-gradient(45deg, var(--ici-lightblue), var(--ici-purple)) 1;
     margin-bottom: 1em;
     transition: 0.5s;
     width: 100%;
@@ -153,12 +148,7 @@ main {
 
 .boxed {
     border: solid 0.1em var(--ici-grey);
-    border-image: linear-gradient(
-            to top left,
-            var(--ici-lightblue),
-            var(--ici-purple)
-        )
-        1;
+    border-image: linear-gradient(to top left, var(--ici-lightblue), var(--ici-purple)) 1;
     clip-path: inset(0 round 0.1em);
 }
 
@@ -171,7 +161,7 @@ main.h2 {
 }
 
 h3 {
-    color: #30424b);
+    color: #30424b;
     border-bottom: 0.2px solid var(--ici-purple);
     font-variant: small-caps;
 }
@@ -201,12 +191,7 @@ footer a {
 
 .boxer {
     border: 5px solid;
-    border-image: linear-gradient(
-            45deg,
-            var(--ici-lightblue),
-            var(--ici-purple)
-        )
-        1;
+    border-image: linear-gradient(45deg, var(--ici-lightblue), var(--ici-purple)) 1;
     margin-bottom: 1em;
 }
 
@@ -480,7 +465,6 @@ section {
     border: 1px solid transparent;
     background:
         linear-gradient(white, white) padding-box,
-        linear-gradient(135deg, var(--ici-burnt), var(--ici-lightblue))
-            border-box;
+        linear-gradient(135deg, var(--ici-burnt), var(--ici-lightblue)) border-box;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
